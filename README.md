@@ -28,6 +28,8 @@ The goal of this project is analyze Uniswap V2 and SushiSwap AMM pools using on-
 
 The project requires an eth node provider for data collection. A public Alchemy URL is in the `example.py` file, but is likely to be rate limited. We recommend getting your own key and adding it to the .env file as `PROVIDER_URL`.
 
+The project uses the [we3.py](https://web3py.readthedocs.io/en/latest/overview.html) Python package.
+
 ### Dependency Management
 
 The project uses [Poetry](https://python-poetry.org/) as its dependency manager. Below are the steps to get started:
