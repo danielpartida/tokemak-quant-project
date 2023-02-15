@@ -10,7 +10,8 @@ default_provider_url = "https://eth-mainnet.g.alchemy.com/v2/_gg7wSSi0KMBsdKnGVf
 
 def main():
     load_dotenv()
-    w3 = Web3(Web3.HTTPProvider(os.getenv('PROVIDER_URL', default_provider_url)))
+    provider_url = os.getenv('MAINET', default_provider_url)
+    w3 = Web3(Web3.HTTPProvider(provider_url))
     print(w3.eth.block_number)
 
 
