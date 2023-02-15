@@ -1,9 +1,23 @@
 import os
 
+import pandas as pd
 from dotenv import load_dotenv
 from web3 import Web3
 
 default_provider_url = "https://eth-mainnet.g.alchemy.com/v2/_gg7wSSi0KMBsdKnGVfHDueq6xMB9EkC"
+
+
+def read_pool_data(file: str = '../data/uni_v2_sushi_pools.csv') -> pd.DataFrame:
+    """
+    Read pool data and filter data where ETH (WETH) are one of the tokens
+    :param file: file name with its location, assumes that tokenmak_quant_project/ is working directory
+    :return: pd.DataFrame with filtered data
+    """
+    data = pd.read_csv(file)
+
+    data = data[(data.token0_symbol == 'WETH') | (data.token1_symbol == 'WETH')]
+
+    return data
 
 
 def main():
@@ -19,4 +33,7 @@ def main():
 
 
 if __name__ == '__main__':
+
+    pool_data = read_pool_data()
+
     main()
