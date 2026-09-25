@@ -1,26 +1,25 @@
 # Tokemak Quant Project
 
-The goal of this project is analyze Uniswap V2 and SushiSwap AMM pools using on-chain data and recommend 10 pools that are expected to have the best risk-adjusted return for a relatively passive investment strategy.
+The goal of this project is analyze Curve & Maverick LST pool (Mode-Both on MAV) using on-chain data. 
+
+  1. Identify various sources of return for an LP
+  2. Analyze 30 & 90 day return for an LP 
+  3. Recommend which pool is expected to have the best risk-adjusted return for a relatively passive investment strategy
+
+The pools are: 
+
+  * Curve pool stETH/ETH: 0x06325440D014e39736583c165C2963BA99fAf14E
+  * MAV pool swETH/ETH: 0x0CE176E1b11A8f88a4Ba2535De80E81F88592bad
 
 ## Project Requirements
-
-* `data/uni_v2_sushi_pools.csv` has a list of most known pools. This can be considered a definitive list for this project
-* only analyze pools where ETH (WETH) are one of the tokens
-* use primarily on-chain data. If you have other data sources feel fee to use them, but the project needs to be runnable without additional creds
+* use primarily on-chain data. Show code on how the data was pulled and analyzed
+* 1-2 pager explaining your thoughts, observation & conclusion
 
 ## Example Metrics (Non-Exhaustive)
 1. historical total return
 2. historical fee return
 3. historical volume/turnover/TVL/etc
 4. token price volatility
-
-## Minimum Output
-
-1. A table with stats/metrics used to identify the target pools
-2. A summary table with the selected pools
-3. A write-up explaining why the pools were selected (can be brief 1-2 paragraphs)
-4. [Optional] Other stats/metrics you would look at with more time
-
 
 ## Project Setup
 
